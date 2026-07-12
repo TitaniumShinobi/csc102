@@ -1,0 +1,80 @@
+/*
+declaration block for the body element, which sets the font family to 'League Spartan', a sans-serif font. This will apply to all text within the body of the document, giving it a clean and modern look.
+
+selector{
+    property: value;
+    property2: value2;
+}
+*/
+header {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+nav {
+    width: 100%; /* Set the width of the navigation bar */
+    padding: 0px;
+    padding-bottom: 20px; /* Add padding to create space around the content */
+    background-color: #ffdaaf; /* Light peach background for the navigation bar */
+    color: #fff; /* White text for better contrast */
+    text-align: center; /* Center align the text in the navigation bar */
+    box-sizing: border-box; /* Ensure padding is included in the total width and height */
+    font-family: 'Courier New', monospace; /* Use a monospace font for the navigation bar */
+}
+
+body {
+    background-color: #ffdaaf; /* Light peach background color */
+    color: #333; /* Dark gray text for better contrast */
+    font-family: 'League Spartan', sans-serif;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+h1, h2 {
+    height: 1%; /* Set the height of the headings */
+    width: 100%; /* Set the width of the headings */
+    color: #854900; /* Dark gray color for headings */
+    padding: 0; /* Add padding around headings */
+    margin: 0 auto; /* Remove default margin */
+    margin-top: 10px; /* Add space above headings */
+    margin-bottom: 0px; /* Add space below headings */
+    text-align: center; /* Center align the text */
+}
+
+footer {
+    width: 100%; /* Set the width of the footer to span the entire page */
+    padding: 50px; /* Add padding to create space around the content */
+    background-color: #242a00; /* Dark background for the footer */
+    color: white; /* White text for better contrast */
+    text-align: center; /* Center align the text in the footer */
+    box-sizing: border-box; /* Ensure padding is included in the total width and height */
+    font-family: 'Courier New', monospace; /* Use a monospace font for the footer */
+}
+
+#naruto-ichiraku-ramen {
+    display: block; /* Make the image a block element */
+    margin-right: 20px auto; /* Center the image horizontally and add vertical margin */
+    border-radius: 10px; /* Add rounded corners to the image */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    width: 100%; /* Make the image responsive */
+    max-width: 500px; /* Set a maximum width for the image */
+}
+
+a {
+    color: #007BFF; /* Blue color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-family: 'Courier New', Courier, monospace; /* Use a monospace font for links */
+}

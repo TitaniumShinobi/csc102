@@ -9,27 +9,28 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CSC102 Home Page</title>
-        <link rel="stylesheet" href="style.css">
+        <!-- Linking to the external CSS file for styling and Google Fonts for typography -->
+        <link rel="stylesheet" href="main.css">
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet">
     </head>
     <!-- body tag contains the content of the document that is displayed in the browser -->
     <body>
-        <nav; style="font-family: 'League Spartan', sans-serif;">
+        <header>
+            <h1>Welcome to my CSC102 Home Page</h1>
+        </header>
+        <nav>
             <h2>Navigation</h2>
             <a href="./index.html">Home</a>
             <a href="./boards.html">Boards</a>
         </nav>
-        <header>
-            <h1 style="font-family: 'League Spartan', sans-serif; text-align: center;">Welcome to my CSC102 Home Page</h1>
-        </header>
         <main>
-            <section id="about"; style="font-family: 'League Spartan', sans-serif;">
+            <section id="about">
                 <h2>About Me</h2>
                 <p>Hello! I'm Devon Woodson, a passionate web developer with a love for creating beautiful and functional websites. I enjoy learning new technologies and improving my skills.</p>
                 <p>In my free time, I like to work on personal projects, contribute to open-source software, and explore the latest trends in web development.</p>
                 <p>Feel free to check out my projects and get in touch if you'd like to collaborate or have any questions!</p>
                 <!-- Adding an image of Naruto at Ichiraku Ramen -->
-                <p><img id="naruto-ichiraku-ramen" src="assets/naruto-ichiraku.png" style="width: 500px;"></p>
+                <p><img id="naruto-ichiraku-ramen" src="assets/naruto-ichiraku.png" alt="Naruto at Ichiraku Ramen"></p>
             </section>
             <section id="projects" style="display: none;">
                 <h2>Projects</h2>
@@ -39,19 +40,19 @@
                     <li><a href="project3.html">Project 3</a></li>
                 </ul>
             </section>
-            <section id="contact">
+            <section id="contact" style="margin-top: 100px;">
                 <h2>Contact</h2>
-                <p>You can reach me at <a href="mailto: devon@thewreck.org" style="font-family: 'Courier New', Courier, monospace;">devon@thewreck.org</a></p>
+                <p style="text-align: center; margin-bottom: 50px;">You can reach me at <a href="mailto: devon@thewreck.org">devon@thewreck.org</a></p>
             </section>
-        </main style="margin-bottom: 50px;">
-        <footer style="font-family: 'Courier New', monospace; margin-top: 50px; bottom: 0; left: 0; right: 0; text-align: center;">
+        </main>
+        <footer>
             <p>
                 Devon Woodson
                 <br>
                 University of Advancing Technology
                 <br>
                 2625 W Baseline Rd, 
-                <br>
+                <br>    
                 Tempe, AZ 85283
             </p>
         </footer>
