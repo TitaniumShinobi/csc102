@@ -46,7 +46,7 @@ main {
 h1, h2 {
     height: 1%; /* Set the height of the headings */
     width: 100%; /* Set the width of the headings */
-    color: #854900; /* Dark gray color for headings */
+    color: #854900; /* Dark brown color for headings */
     padding: 0; /* Add padding around headings */
     margin: 0 auto; /* Remove default margin */
     margin-top: 10px; /* Add space above headings */
@@ -77,4 +77,74 @@ a {
     color: #007BFF; /* Blue color for links */
     text-decoration: none; /* Remove underline from links */
     font-family: 'Courier New', Courier, monospace; /* Use a monospace font for links */
+}
+
+.container {
+    flex: 1;
+    padding: 20px;
+    min-height: 100vh;
+    box-sizing: border-box;
+    background-color: #854900;
+    color: white;
+}
+
+.secret-body {
+    background-color: #854900;
+}
+
+.secret-body header {
+    background-color: #ffdaaf;
+}
+
+.secret-body .container {
+    min-height: 0;
+}
+
+.secret-page {
+    background-color: #854900;
+    min-height: 100vh;
+    color: #ffdaaf;
+}
+
+.secret-page a,
+.secret-page label,
+.secret-page p {
+    color: #ffdaaf;
+}
+
+.secret-card {
+    width: fit-content;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px 40px;
+    background-color: white;
+    color: #854900;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px gray;
+    text-align: center;
+}
+
+.secret-label {
+    color: purple;
+}
+
+.welcome-message {
+    color: olive;
+}
+
+#message img {
+    width: 200px;
+    margin-top: 20px; /* Add space above the image */
+    border-radius: 15px; /* Add rounded corners to the image */
+    animation: popIn 0.5s;
+}
+
+@keyframes popIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }

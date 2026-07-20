@@ -1,0 +1,55 @@
+<!-- Devon Woodson, 07/20/2026 -->
+<!-- This page collects user information and displays a secret message after validation -->
+<!DOCTYPE html>
+<!-- html tag is the root of the HTML document and it contains all other elements -->
+<html lang="en">
+    <head>
+        <!-- Defines character encoding -->
+        <meta charset="UTF-8">
+        <!-- Makes page responsive -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Page title -->
+        <title>Secret Message</title>
+        <!-- Connects CSS file -->
+        <link rel="stylesheet" href="main.css">
+        <!-- Connects JavaScript file -->
+        <script src="strings.js" defer></script>
+        <!-- Linking to Google Fonts for typography -->
+        <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <!-- body tag contains the content of the document that is displayed in the browser -->
+    <body class="secret-body">
+        <!-- Page header -->
+        <header>
+            <h1>CSC102 Secret Message Page</h1>
+        </header>
+        <!-- Navigation content area -->
+        <nav>
+            <h2>Navigation</h2>
+            <a href="./index.html">Home</a>
+            <a href="./boards.html">Boards</a>
+            <a href="./strings.html">Secret Message</a>
+        </nav>
+        <!-- Main container -->
+        <main class="container secret-page">
+            <!-- Instructions -->
+            <p>Enter your information to unlock the secret message:</p>
+            <!-- User input form -->
+            <form id="secretForm">
+                <!-- First name input -->
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName">
+                <!-- Last name input -->
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName">
+                <!-- Zip code input -->
+                <label for="zipCode">Zip Code:</label>
+                <input type="text" id="zipCode">
+                <!-- Submit button -->
+                <input type="submit" value="Unlock Message">
+            </form>
+            <!-- Area where validation messages appear -->
+            <p id="message"></p>
+        </main>
+    </body>
+</html>
