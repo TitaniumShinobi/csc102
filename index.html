@@ -1,9 +1,8 @@
-<!-- Devon Woodson, ~07/03/2026~ > 07/11/2026 -->
+<!-- Devon Woodson, ~07/03/2026~ > ~07/11/2026~ > 07/25/2026 -->
 <!-- DOCTYPE this is the first tag on the page and it tells the browser that this is an HTML5 page -->
 <!DOCTYPE html>
 <!-- html tag is the root of the HTML document and it contains all other elements -->
- <html lang="en">
- </html>
+<html lang="en">
     <!-- head tag contains metadata about the document, such as the title and links to stylesheets -->
     <head>
         <meta charset="UTF-8">
@@ -20,8 +19,9 @@
         </header>
         <nav>
             <h2>Navigation</h2>
-            <a href="./index.html">Home</a>
-            <a href="./boards.html">Boards</a>
+            <a href="./index.html">Home</a> |
+            <a href="./boards.html">Boards</a> |
+            <a href="./game.html">Game</a> |
             <a href="./strings.html">Secret Message</a>
         </nav>
         <main>
@@ -31,6 +31,10 @@
                 <p>In my free time, I like to work on personal projects, contribute to open-source software, and explore the latest trends in web development.</p>
                 <p>Feel free to check out my projects and get in touch if you'd like to collaborate or have any questions!</p>
                 <!-- Adding an image of Naruto at Ichiraku Ramen -->
+                <!-- Start button -->
+                <input type="button" value="Start" id="startButton">
+                <!-- Stop button -->
+                <input type="button" value="Stop" id="stopButton">
                 <p><img id="naruto-ichiraku-ramen" src="assets/naruto-ichiraku.png" alt="Naruto at Ichiraku Ramen"></p>
             </section>
             <section id="projects" style="display: none;">
@@ -57,5 +61,6 @@
                 Tempe, AZ 85283
             </p>
         </footer>
+    <script src="code.js"></script>
     </body>
- </html>
+</html>

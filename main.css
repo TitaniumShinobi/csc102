@@ -7,11 +7,11 @@ selector{
 }
 */
 header {
-    margin: 0;
-    padding: 0;
-    margin-top: 10px;
-    text-align: center;
-    box-sizing: border-box;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    margin-top: 10px; /* Add space above the header */
+    text-align: center; /* Center align the text in the header */
+    box-sizing: border-box; /* Ensure padding is included in the total width and height */
 }
 
 nav {
@@ -19,7 +19,7 @@ nav {
     padding: 0px;
     padding-bottom: 20px; /* Add padding to create space around the content */
     background-color: #ffdaaf; /* Light peach background for the navigation bar */
-    color: #fff; /* White text for better contrast */
+    color: #854900; /* Dark brown text for better contrast */
     text-align: center; /* Center align the text in the navigation bar */
     box-sizing: border-box; /* Ensure padding is included in the total width and height */
     font-family: 'Courier New', monospace; /* Use a monospace font for the navigation bar */
@@ -32,15 +32,15 @@ body {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
 
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    display: flex; /* Use flexbox layout for the body */
+    flex-direction: column; /* Arrange child elements in a column */
 }
 
 main {
-    flex: 1;
-    padding-right: 20px;
-    padding-left: 20px;
+    flex: 1; /* Allow the main element to grow and fill available space */
+    padding-right: 20px; /* Add padding to the right of the main element */
+    padding-left: 20px; /* Add padding to the left of the main element */
 }
 
 h1, h2 {
@@ -65,7 +65,8 @@ footer {
 }
 
 #naruto-ichiraku-ramen {
-    display: block; /* Make the image a block element */
+    position: relative; /* Position the image relative to its normal position */
+    display: none; /* Hide the image initially */
     margin-right: 20px auto; /* Center the image horizontally and add vertical margin */
     border-radius: 10px; /* Add rounded corners to the image */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
@@ -80,71 +81,69 @@ a {
 }
 
 .container {
-    flex: 1;
-    padding: 20px;
-    min-height: 100vh;
-    box-sizing: border-box;
-    background-color: #854900;
-    color: white;
+    flex: 1; /* Allow the container to grow and fill available space */
+    padding: 20px; /* Add padding inside the container */
+    min-height: 100vh; /* Ensure the container takes at least the full viewport height */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+    color: white; /* Set the text color inside the container */
 }
 
 .secret-body {
-    background-color: #854900;
+    background-color: #854900; /* Set the background color for the secret body */
 }
 
 .secret-body header {
-    background-color: #ffdaaf;
+    background-color: #ffdaaf; /* Set the background color for the header in the secret body */
 }
 
 .secret-body .container {
-    min-height: 0;
+    min-height: 0; /* Override the minimum height for the container in the secret body */
 }
 
 .secret-page {
-    background-color: #854900;
-    min-height: 100vh;
-    color: #ffdaaf;
+    min-height: 100vh; /* Ensure the secret page takes at least the full viewport height */
+    color: #ffdaaf; /* Set the text color for the secret page */
 }
 
 .secret-page a,
 .secret-page label,
 .secret-page p {
-    color: #ffdaaf;
+    color: #ffdaaf; /* Set the text color for links, labels, and paragraphs in the secret page */
 }
 
 .secret-card {
     width: fit-content;
-    max-width: 400px;
-    margin: 20px auto;
-    padding: 20px 40px;
-    background-color: white;
-    color: #854900;
-    border-radius: 15px;
-    box-shadow: 0px 5px 15px gray;
-    text-align: center;
+    max-width: 400px; /* Set a maximum width for the secret card */
+    margin: 20px auto; /* Center the secret card horizontally and add vertical margin */
+    padding: 20px 40px; /* Add padding inside the secret card */
+    background-color: white; /* Set the background color of the secret card */
+    color: #854900; /* Set the text color of the secret card */
+    border-radius: 15px; /* Add rounded corners to the secret card */
+    box-shadow: 0px 5px 15px gray; /* Add a subtle shadow for depth */
+    text-align: center; /* Center align the text inside the secret card */
 }
 
 .secret-label {
-    color: purple;
+    color: purple; /* Set the text color for secret labels */
 }
 
 .welcome-message {
-    color: olive;
+    color: olive; /* Set the text color for welcome messages */
 }
 
 #message img {
     width: 200px;
     margin-top: 20px; /* Add space above the image */
     border-radius: 15px; /* Add rounded corners to the image */
-    animation: popIn 0.5s;
+    animation: popIn 0.5s; /* Apply the pop-in animation to the image */
 }
 
 @keyframes popIn {
     from {
-        transform: scale(0);
+        transform: scale(0); /* Start the pop-in animation from a scale of 0 */
     }
 
     to {
-        transform: scale(1);
+        transform: scale(1); /* End the pop-in animation at a scale of 1 */
     }
 }
