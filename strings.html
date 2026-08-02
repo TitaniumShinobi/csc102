@@ -1,4 +1,4 @@
-<!-- Devon Woodson, ~07/20/2026~ > 07/25/2026 -->
+<!-- Devon Woodson, ~07/20/2026~ > ~07/25/2026~ > 08/01/2026 -->
 <!-- This page collects user information and displays a secret message after validation -->
 <!DOCTYPE html>
 <!-- html tag is the root of the HTML document and it contains all other elements -->
@@ -33,22 +33,13 @@
         </nav>
         <!-- Main container -->
         <main class="container secret-page">
-            <!-- Instructions -->
-            <p>Enter your information to unlock the secret message:</p>
-            <!-- User input form -->
-            <form id="secretForm">
-                <!-- First name input -->
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName">
-                <!-- Last name input -->
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName">
-                <!-- Zip code input -->
-                <label for="zipCode">Zip Code:</label>
-                <input type="text" id="zipCode">
-                <!-- Submit button -->
-                <input type="submit" value="Unlock Message">
-            </form>
+            <!-- Instructions for the user -->
+            <p>Select an option:</p>
+            <!-- Buttons for user interaction -->
+            <button id="palindromeButton">Check Palindrome</button>
+            <button id="secretButton">Unlock Secret Message</button>
+            <!-- JavaScript-generated content -->
+            <div id="content"></div>
             <!-- Area where validation messages appear -->
             <p id="message"></p>
         </main>

@@ -1,8 +1,70 @@
-// Connects form submission to validation
-document.getElementById("secretForm").onsubmit = validate;
+// Gets the content area
+var content = document.getElementById("content");
+
+
+// Shows exit message
+function resetPage() {
+
+    content.innerHTML =
+    "<h2>Session Ended</h2>" +
+    "<p>Thank you for using the Secret Message Terminal.</p>";
+}
+
+
+// Shows palindrome checker
+function showPalindrome() {
+
+    content.innerHTML =
+    "<h2>Palindrome Checker</h2>" +
+    "<p>Enter your word to check if it's a palindrome:</p>" +
+    "<input type='text' id='userInput'>" +
+    "<button id='checkButton'>Check</button>" +
+    "<button id='resetButton'>Reset</button>" +
+    "<p id='message'></p>";
+
+    document.getElementById("message").innerHTML = "";
+
+    document.getElementById("checkButton").onclick = validatePalindrome;
+
+    document.getElementById("resetButton").onclick = resetPage;
+}
+
+
+// Shows secret message
+function showSecret() {
+
+    content.innerHTML =
+    "<h2>Secret Message</h2>" +
+    "<form id='secretForm'>" +
+    "<p>Enter your information to unlock the secret message:</p>" +
+    "<label>First Name:</label>" +
+    "<input type='text' id='firstName'>" +
+
+    "<label>Last Name:</label>" +
+    "<input type='text' id='lastName'>" +
+
+    "<label>Zip Code:</label>" +
+    "<input type='text' id='zipCode'>" +
+
+    "<input type='submit' value='Unlock'>" +
+    "</form>" +
+    
+    "<button id='resetButton'>Reset</button>" +
+    "<p id='message'></p>";
+
+    document.getElementById("secretForm").onsubmit = validateSecret;
+
+    document.getElementById("resetButton").onclick = resetPage;
+}
+
+
+// Connect buttons
+document.getElementById("palindromeButton").onclick = showPalindrome;
+
+document.getElementById("secretButton").onclick = showSecret;
 
 // Runs when the user submits the form
-function validate(event) {
+function validateSecret(event) {
     // Prevents page refresh
     event.preventDefault();
     // Gets first name
@@ -71,4 +133,49 @@ function validate(event) {
     // Displays secret message
     document.getElementById("message").innerHTML =
     "<div class='secret-card'>" + "<h2>🔐 ACCESS GRANTED 🔐</h2>" + "<h3 class='welcome-message'>Welcome " + fullName + " from " + zipCode + "!</h3>" + "<br> You have successfully passed validation." + "<br><img src='assets/smile.svg' alt='Smile'>" + "<br><h3><span class='secret-label'>[SECRET MESSAGE]:</span> UAT is awesome!</h3>" + "</div>";
+}
+
+
+// Checks if a string is a palindrome
+function checkPalindrome(word) {
+
+    // Removes spaces and makes everything lowercase
+    var cleanedWord = word.replaceAll(" ", "").toLowerCase();
+
+    // Stores reversed string
+    var reversedWord = "";
+
+    // Loop through the string backwards
+    for (var i = cleanedWord.length - 1; i >= 0; i--) {
+
+        // Adds each character to reversedWord
+        reversedWord += cleanedWord.charAt(i);
+    }
+
+    // Checks if both strings match
+    if (cleanedWord == reversedWord) {
+
+        return true;
+
+    } else {
+
+        return false;
+    }
+}
+
+
+function validatePalindrome() {
+
+    var userWord = document.getElementById("userInput").value;
+
+    if (checkPalindrome(userWord)) {
+
+        document.getElementById("message").innerHTML =
+        "✅ " + userWord + " is a palindrome!";
+
+    } else {
+
+        document.getElementById("message").innerHTML =
+        "❌ " + userWord + " is not a palindrome.";
+    }
 }
