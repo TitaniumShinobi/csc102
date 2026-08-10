@@ -2,6 +2,29 @@
 var content = document.getElementById("content");
 
 
+// Class: Creates a Palindrome object
+class PalindromeCheck {
+
+    // Stores the word being checked
+    constructor(word) {
+        this.word = word;
+    }
+
+    // Checks if the word is a palindrome
+    isPalindrome() {
+        return checkPalindrome(this.word);
+    }
+}
+
+
+// Loop Counter: Stores the number of attempts made by the user
+var attempts = 0;
+
+
+// Array Collection: Stores confirmed palindrome words
+var previousPalindromes = [];
+
+
 // Shows exit message
 function resetPage() {
 
@@ -168,14 +191,23 @@ function validatePalindrome() {
 
     var userWord = document.getElementById("userInput").value;
 
-    if (checkPalindrome(userWord)) {
+    attempts++;
+
+    // Creates a new palindrome object
+    var palindrome = new PalindromeCheck(userWord);
+
+    if (palindrome.isPalindrome()) {
+
+        // Adds confirmed palindrome to collection
+        previousPalindromes.push(userWord);
 
         document.getElementById("message").innerHTML =
-        "✅ " + userWord + " is a palindrome!";
+        "Attempt #" + attempts + ": ✅ " + userWord + " is a palindrome!" +
+        "<br>Previous palindromes: " + previousPalindromes;
 
     } else {
 
         document.getElementById("message").innerHTML =
-        "❌ " + userWord + " is not a palindrome.";
+        "Attempt #" + attempts + ": ❌ " + userWord + " is not a palindrome.";
     }
 }
