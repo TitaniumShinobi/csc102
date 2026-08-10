@@ -1,3 +1,5 @@
+// Devon Woodson, 08/09/2026
+
 // JavaScript code for the meme movement & game page
 
 // Stores the movement timer
@@ -19,9 +21,15 @@ var yDirection = 1;
 var meme = document.getElementById("naruto-ichiraku-ramen");
 
 
+// Gets the sound file from HTML
+var gameSound = document.getElementById("gameSound");
+
 // Gets the buttons from HTML
 var startButton = document.getElementById("startButton");
 var stopButton = document.getElementById("stopButton");
+
+if (startButton) stopButton.disabled = true;
+
 
 // Runs when Start button is clicked
 function startMoving() {
@@ -77,11 +85,21 @@ function stopMoving() {
 }
 
 
-// Connects buttons to events
-startButton.onclick = startMoving;
-stopButton.onclick = stopMoving;
+// Connects buttons to events (only on pages that have them)
+if (startButton) {
+    startButton.onclick = startMoving;
+    stopButton.onclick = stopMoving;
+}
+
 
 // Changes text for the game page
 function updateText() {
     document.getElementById("heading").innerHTML = "Javascript is awesome!";
+    // Plays sound effect
+    gameSound.play();
+}
+
+var updateTextButton = document.getElementById("updateText");
+if (updateTextButton) {
+    updateTextButton.onclick = updateText;
 }

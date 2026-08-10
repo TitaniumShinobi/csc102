@@ -1,4 +1,4 @@
-<!-- Devon Woodson, ~07/11/2026~ > 07/25/2026 -->
+<!-- Devon Woodson, ~07/11/2026~ > ~07/25/2026~ > 08/09/2026 -->
 <!-- DOCTYPE this is the first tag on the page and it tells the browser that this is an HTML5 page -->
 <!DOCTYPE html>
 <!-- html tag is the root of the HTML document and it contains all other elements -->
@@ -8,7 +8,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Game Page</title>
-        <script src="code.js"></script>
         <!-- Linking to the external CSS file for styling and Google Fonts for typography -->
         <link rel="stylesheet" href="main.css">
         <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;600;700&display=swap" rel="stylesheet">
@@ -25,7 +24,10 @@
             <a href="./strings.html">Secret Message</a>
         </nav>
         <main style="text-align: center;">
-            <button onclick="updateText();">Change Text</button>
+            <button id="updateText">Change Text</button>
+            <!-- Adds game sound effect -->
+            <audio id="gameSound" src="assets/mixkit-arcade-retro-game-over-213.wav"></audio>
         </main>
+        <script src="code.js"></script>
     </body>
 </html>
