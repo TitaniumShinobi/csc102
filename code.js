@@ -1,4 +1,18 @@
-// Devon Woodson, 08/09/2026
+// Devon Woodson, ~08/09/2026~ > 08/16/2026
+
+// JavaScript code for handling the splash screen and site entry
+
+var enterButton = document.getElementById("enterButton");
+var splash = document.getElementById("splash");
+
+function enterSite() {
+    splash.style.display = "none";
+}
+
+if (enterButton) {
+    enterButton.onclick = enterSite;
+}
+
 
 // JavaScript code for the meme movement & game page
 
@@ -96,7 +110,9 @@ if (startButton) {
 function updateText() {
     document.getElementById("heading").innerHTML = "Javascript is awesome!";
     // Plays sound effect
-    gameSound.play();
+    if (gameSound) {
+        gameSound.play();
+    }
 }
 
 var updateTextButton = document.getElementById("updateText");

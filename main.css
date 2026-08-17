@@ -6,6 +6,47 @@ selector{
     property2: value2;
 }
 */
+#splash {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: #fbd7a6;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    z-index: 1000;
+}
+
+#splash h1 {
+    margin: 10px;
+}
+
+#splash h2 {
+    margin: 10px;
+}
+
+#splash p {
+    margin: 10px;
+}
+
+#splash button {
+    margin: 10px;
+}
+
+#enterButton {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 header {
     margin: 0; /* Remove default margin */
     padding: 0; /* Remove default padding */
@@ -146,4 +187,23 @@ a {
     to {
         transform: scale(1); /* End the pop-in animation at a scale of 1 */
     }
+}
+
+table {
+    width: 80%;
+    margin: 30px auto;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #333;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+    background-color: #854900; /* Set the background color for table headers */
+    color: white; /* Set the text color for table headers */
 }
